@@ -1,6 +1,9 @@
-FROM amazon/aws-sam-cli-build-image-python3.8
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
 
-RUN mkdir -p /app
-WORKDIR /app
-COPY . cloud9.py /app/
-RUN pip install -r requirements.txt
+WORKDIR /code
+
+COPY . /code
+
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

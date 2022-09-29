@@ -9,3 +9,7 @@ openai
 python-youtube
 beautifulsoup4==4.11.1
 aws-cdk-lib
+black
+uvicorn[standard]
+wikipedia
+git+https://github.com/LIAAD/yake
