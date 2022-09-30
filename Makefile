@@ -8,7 +8,7 @@ lint:
 test:
 	python -m pytest -vv --cov=main --cov=logic test_*.py
 
-format:
-	black *.py logic/*.py
+# format:
+# 	black *.py logic/*.py
 
-refactor: format lint
+# refactor: format lint
