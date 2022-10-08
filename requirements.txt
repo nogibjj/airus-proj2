@@ -13,3 +13,5 @@ black
 uvicorn[standard]
 wikipedia
 git+https://github.com/LIAAD/yake
+pandas
+datetime
